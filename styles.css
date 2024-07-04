@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366; /* Azul escuro */
+    color: white;
+}
+
+header .left {
+    display: flex;
+    align-items: center;
+}
+
+header .left img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+header select {
+    margin-left: 20px;
+    padding: 5px;
+    background-color: #cccccc; /* Cinza */
+    color: #003366; /* Azul escuro */
+    border: none;
+}
+
+header button {
+    background-color: #00cc99; /* Verde claro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #009977; /* Tom mais escuro de verde claro */
+}
+
+nav {
+    width: 200px;
+    background-color: #cccccc; /* Cinza */
+    padding: 20px;
+}
+
+nav button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #003366; /* Azul escuro */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #001a33; /* Tom mais escuro de azul escuro */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366; /* Azul escuro */
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
