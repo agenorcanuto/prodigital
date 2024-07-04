@@ -2,6 +2,25 @@ function openAtendimento() {
     window.open('https://pro-digital.tomticket.com/', '_blank');
 }
 
+function openDepartamentoPessoal() {
+    window.open('https://onvio.com.br/', '_blank');
+}
+
+function openProDigital() {
+    window.open('https://app.vhsys.com.br/', '_blank');
+}
+
+function openBaseConhecimento() {
+    window.open('https://pro-digital.tomticket.com/kb', '_blank');
+}
+
+function openWhatsApp() {
+    window.open('https://api.whatsapp.com/send?phone=553141361490', '_blank');
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const ctx1 = document.getElementById('chart1').getContext('2d');
     const chart1 = new Chart(ctx1, {
@@ -119,4 +138,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
