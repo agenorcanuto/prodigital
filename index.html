@@ -6,6 +6,7 @@
     <title>Pro Contabilidade</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,148 +22,26 @@
     </header>
     <div class="container">
         <nav>
-            <button>Atendimento</button>
-            <button>Departameto Pessoal</button>
-            <button>Pro Digital</button>
-            <button>Ferramentas</button>
-            <button>Base de Conhecimento</button>
-            <button>Whatsapp</button>
-            <button>Cobrança</button>
-            <button>Meu Banco</button>
-            <button>Outros</button>
-            
-            
-            <!-- Adicione mais botões conforme necessário -->
+            <button>Sistema 1</button>
+            <button>Sistema 2</button>
+            <button>Sistema 3</button>
+            <button onclick="openAtendimento()">Atendimento</button>
         </nav>
         <main>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <canvas id="chart1" width="400" height="200"></canvas>
-                <canvas id="chart2" width="400" height="200"></canvas>
-                <canvas id="chart3" width="400" height="200"></canvas>
-                <canvas id="chart4" width="400" height="200"></canvas>
+            <div class="charts">
+                <div class="chart-row">
+                    <canvas id="chart1" width="400" height="200"></canvas>
+                    <canvas id="chart2" width="400" height="200"></canvas>
+                </div>
+                <div class="chart-row">
+                    <canvas id="chart3" width="400" height="200"></canvas>
+                    <canvas id="chart4" width="400" height="200"></canvas>
+                </div>
             </div>
         </main>
     </div>
     <footer>
         Pro Contabilidade
     </footer>
-
-    <script>
-        const ctx1 = document.getElementById('chart1').getContext('2d');
-        const chart1 = new Chart(ctx1, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: 'Dataset 1',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        const ctx2 = document.getElementById('chart2').getContext('2d');
-        const chart2 = new Chart(ctx2, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'Dataset 2',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    fill: false,
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    tension: 0.1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        const ctx3 = document.getElementById('chart3').getContext('2d');
-        const chart3 = new Chart(ctx3, {
-            type: 'pie',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow'],
-                datasets: [{
-                    label: 'Dataset 3',
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-
-        const ctx4 = document.getElementById('chart4').getContext('2d');
-        const chart4 = new Chart(ctx4, {
-            type: 'doughnut',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: 'Dataset 4',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-    </script>
 </body>
 </html>
