@@ -86,3 +86,14 @@ footer {
     display: flex;
     flex: 1;
 }
+
+.charts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chart-row {
+    display: flex;
+    gap: 20px;
+}
